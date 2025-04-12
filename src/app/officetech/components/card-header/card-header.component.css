@@ -1,0 +1,21 @@
+.card-header__content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card-header__content-item {
+  padding: 1rem
+}
+
+.card-header__content-item p {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: #FBD864;
+  width: max-content;
+  margin: 0;
+  color: #fff;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  border-radius: 20px;
+}

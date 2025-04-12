@@ -1,0 +1,10 @@
+<div id="dialog" title="Enter your name">
+  <h3>New Skill</h3>
+  <p>Write your new best skill here...</p>
+  <input type="text" id="name" [(ngModel)]="skill"/>
+  <div class="buttons">
+    <mat-button-toggle (click)="saveSkill()">OK</mat-button-toggle>
+    <mat-button-toggle (click)="cancelSkill()">Cancel</mat-button-toggle>
+  </div>
+</div>
+

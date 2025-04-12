@@ -1,0 +1,37 @@
+mat-card {
+  background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+  font-family: "Lexend Deca", sans-serif;
+  margin: 2rem 0;
+}
+
+.card__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+  position: relative;
+}
+
+.card__content-item p {
+  margin: 0;
+}
+
+.icon-cancel {
+  position: absolute;
+  top: 5%;
+  right: 1%;
+  width: max-content;
+}
+
+.icon-cancel i {
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.icon-cancel i:hover {
+  color: #ff0000;
+}

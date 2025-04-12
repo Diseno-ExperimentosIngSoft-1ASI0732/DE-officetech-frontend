@@ -1,0 +1,49 @@
+<div class="forum__container">
+
+  <div class="popup__new_forum" *ngIf="showNewForm">
+    <div class="popup__new_forum__content">
+      <div class="popup__new_forum__content-close" (click)="showNewForum()">
+        <i class="fa-solid fa-times"></i>
+      </div>
+
+      <div class="popup__new-forum-box">
+
+        <div class="popup__new_forum__content-title">
+          <h1>Create a new forum</h1>
+        </div>
+        <div class="popup__new_forum__content-input">
+          <input type="text" placeholder="Title" [(ngModel)]="dataNewForum['title']">
+          <textarea placeholder="Description" [(ngModel)]="dataNewForum['description']"></textarea>
+        </div>
+        <div class="popup__new_forum__content-button" (click)="saveNewPostForum()">
+          <p>Create</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="forum__header" role="heading">
+    <h1 class="forum__header-title" aria-label="title">Forum</h1>
+    <div class="forum__header-new" role="button" *ngIf="type_user" (click)="showNewForum()">
+      <p>Create a new forum</p>
+      <i class="fa-solid fa-plus"></i>
+    </div>
+  </div>
+
+  <div class="forum__content-comments">
+    <app-monkey-not-found *ngIf="data.length === 0 && type_user===1" textString="No posts to display, start creating one!"></app-monkey-not-found>
+    <app-monkey-not-found *ngIf="data.length === 0 && type_user===0" textString="No posts to display, wait for any company to create a post, so you can help them!"></app-monkey-not-found>
+    <div class="comment__container" *ngFor="let e of data">
+      <app-comment [element]="e" (answers)="receiveAnswers($event)" [type_user]="(!type_user)? 'technician' : 'company'"/>
+
+
+
+      <div class="comment__container-answer" *ngIf="!type_user" (click)="newAnswer(e.postId)">
+        Answer
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,35 @@
+<div><h3>Request a new tech service</h3></div>
+
+<form class="example-form" [formGroup]="myForm">
+  <mat-form-field class="example-full-width custom-form-field">
+    <mat-label>Subject</mat-label>
+    <input type="text" matInput formControlName="subject" placeholder="Subject">
+    <mat-error *ngIf="myForm.get('subject')?.hasError('required')">Subject is <strong>required</strong></mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Description</mat-label>
+    <textarea matInput formControlName="description" placeholder="Describe the service you need" appAutoResize></textarea>
+    <mat-error *ngIf="myForm.get('description')?.hasError('required')">Description is <strong>required</strong></mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Technician</mat-label>
+    <mat-select formControlName="technician" [(ngModel)]="technician_selected" name="technician">
+      @for (tech of technicians_available; track tech) {
+        <mat-option [value]="tech.id">{{tech.name}}</mat-option>
+      }
+    </mat-select>
+
+    <mat-error *ngIf="myForm.get('technician')?.hasError('required')">The technician is <strong>required</strong></mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width custom-form-field">
+    <mat-label>Estimate due time</mat-label>
+    <input type="text" matInput formControlName="date" placeholder="dd/mm/yyyy" (input)="onInputChange($event)" maxlength="10" minlength="10">
+    <mat-error *ngIf="myForm.get('date')?.hasError('required')">Date is <strong>required</strong></mat-error>
+  </mat-form-field>
+</form>
+
+<button class="publish" mat-flat-button color="primary" [disabled]="myForm.invalid" (click)="onPublish()">Publish</button>
+

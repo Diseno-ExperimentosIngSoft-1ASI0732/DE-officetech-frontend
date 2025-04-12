@@ -1,0 +1,190 @@
+h1 {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.forum__container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.popup__new_forum {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.popup__new_forum__content {
+  width: max-content;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.popup__new-forum-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.popup__new_forum__content-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__new_forum__content-title {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.popup__new_forum__content-input input, .popup__new_forum__content-input textarea {
+  outline: none;
+  resize: none;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: .6rem 1rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.popup__new_forum__content-button p {
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.popup__new_forum__content-close {
+  text-align: right;
+}
+
+.popup__new_forum__content-close i {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.popup__new_forum__content-close i:hover {
+  opacity: .8;
+}
+
+
+.forum__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.forum__header-title {
+  font-size: 2.5rem;
+  color: #232F9B;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: bold;
+}
+
+.forum__header-new, .popup__new_forum__content-button {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: #232F9B;
+  padding: .5rem 1.2rem;
+  color: #fff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: max-content;
+  align-items: center;
+  cursor: pointer;
+  transition: box-shadow .3s;
+  font-size: 1.1rem;
+  font-weight: 200;
+  margin: 1rem 0;
+}
+
+.forum__header-new:hover, .popup__new_forum__content-button:hover {
+  box-shadow: 0px 0px 3px 1px #232F9B;
+}
+
+.forum__header-new p {
+  margin: 0;
+}
+
+.forum__header-new i{
+  font-size: .8rem;
+}
+
+.comment__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.comment__container-responses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  gap: 1rem;
+  color: #4E4E4E;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.comment__container-responses:hover {
+  opacity: 0.8;
+}
+
+.forum__content-comments {
+  height: calc(100vh - 300px);
+  overflow-y: scroll;
+}
+
+.comment__container-answer {
+  padding: 1rem 3.5rem;
+  background-color: #232F9B;
+  border-radius: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Lexend Deca", sans-serif;
+  margin: 0 2rem;
+  transition: all .3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.comment__container-answer:hover {
+  box-shadow: 0px 0px 3px 1px #232F9B;
+}
+
+
+@media screen and (max-width: 1120px) {
+  .forum__container {
+    margin: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .comment__container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .comment__container-answer, .comment__container-responses  {
+    margin-bottom: 3.5rem;
+  }
+
+}

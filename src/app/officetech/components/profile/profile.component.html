@@ -1,0 +1,35 @@
+<div class="container">
+  <mat-card *ngIf="userData">
+    <div class="content-container">
+      <h2 class="logo-title" aria-label="title" >Profile</h2>
+      <div class="logo-container">
+        <img [src]="userData.image" alt="OfficeTech" role="img" class="logo-officetech" height="68px">
+      </div>
+
+      <mat-card class="signin-card">
+        <mat-card-header>
+          <mat-card-title class="card-title">{{ userData.name }}</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content class="input-field">
+          <p><strong>Name:</strong> {{ userData.name }}</p>
+          <p><strong>Email:</strong> {{ userData.email }}</p>
+          <p><strong>Type of user:</strong> {{ userData.type_user }}</p>
+        </mat-card-content>
+
+
+        <a class="button" (click)="editProfile()">Edit profile</a>
+
+      </mat-card>
+
+    </div>
+  </mat-card>
+</div>
+
+<div class="background-circles">
+  <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
+  <div class="circle circle3"></div>
+  <div class="circle circle4"></div>
+</div>
+

@@ -1,0 +1,55 @@
+mat-card {
+  border-radius: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  margin: 1rem 0;
+  width: 450px;
+}
+
+mat-card-header {
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 1rem;
+}
+
+.card__content-header-title {
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+.card__content-header-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.card__content-subject {
+  font-weight: bold;
+}
+
+.container {
+  width: 100%;
+  gap: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment__container-responses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.comment__container-responses:hover {
+  opacity: .8;
+}
+
+@media screen and(max-width: 780px) {
+  .card-mat {
+    width: 100%;
+  }
+}
+

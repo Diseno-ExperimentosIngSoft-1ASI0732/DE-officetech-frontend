@@ -1,0 +1,37 @@
+<div class="content-container">
+  <div class="logo-container">
+    <img src="./assets/images/logo-officetech.png" alt="OfficeTech" role="img" class="logo-officetech" height="68px">
+    <h2 class="logo-title" aria-label="title" >OfficeTech</h2>
+  </div>
+
+  <mat-card class="signin-card">
+    <mat-card-header>
+      <mat-card-title class="card-title">Welcome!</mat-card-title>
+    </mat-card-header>
+
+    <mat-form-field class="input-field">
+      <mat-label class="field-title">Email</mat-label>
+      <input matInput [(ngModel)]="email">
+    </mat-form-field>
+
+    <mat-form-field class="input-field">
+      <mat-label class="field-title">Password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="pass">
+      <button mat-icon-button matSuffix (click)="hide = !hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <!--<mat-hint align="end"><a href=""><i>Forgot your password?</i></a></mat-hint>-->
+    </mat-form-field>
+
+    <a class="button" (click)="signIn()">SIGN IN</a>
+
+  </mat-card>
+  <h3 class="card-footer">New to OfficeTech? <a class="join-link" (click)="goToSignUp()">Join now</a></h3>
+</div>
+
+<div class="background-circles">
+  <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
+  <div class="circle circle3"></div>
+  <div class="circle circle4"></div>
+</div>

@@ -1,0 +1,277 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "type_user": "company",
+      "name": "Tech Solutions Inc.",
+      "email": "techsolutions@hotmail.com",
+      "password": "yesi123"
+    },
+    {
+      "id": 2,
+      "name": "Jesse Technician",
+      "type_user": "technician",
+      "email": "tecnico@hotmail.com",
+      "password": "yesi321"
+    },
+    {
+      "id": 3,
+      "name": " ",
+      "email": "tech",
+      "password": "",
+      "type_user": "technician"
+    },
+    {
+      "id": 4,
+      "name": " ",
+      "email": "company",
+      "password": "",
+      "type_user": "company"
+    },
+    {
+      "id": 5,
+      "name": "ISI YISI",
+      "email": "ejemplo@example.com",
+      "password": "123",
+      "type_user": "technician"
+    },
+    {
+      "id": 6,
+      "name": " ",
+      "email": "",
+      "password": "",
+      "type_user": ""
+    },
+    {
+      "id": 7,
+      "name": " ",
+      "email": "",
+      "password": "",
+      "type_user": ""
+    },
+    {
+      "id": 8,
+      "name": "asd asd",
+      "email": "ari@gmail.com",
+      "password": "123456",
+      "type_user": "technician"
+    }
+  ],
+  "posts": [
+    {
+      "id_user": 1,
+      "forum_posts": [
+        {
+          "id": 1,
+          "image": "https://raw.githubusercontent.com/AplicacionesWeb-WX54/si730-WX54-Grupo1-Repository/main/assets/members-profile/nekolas-profile.png",
+          "name": "Jesse Esteban",
+          "title": "Networking Issue",
+          "description": "Hi everyone, we're experiencing some connectivity issues with our office network. Despite troubleshooting on our end, we're still unable to resolve the issue. Any suggestions on what might be causing this and how we can fix it?",
+          "answers": [
+            {
+              "name": "Arian Rodriguez",
+              "description": "Have you checked the network cables and switches? Sometimes, a faulty cable or switch can cause connectivity issues. Also, make sure that the network settings are configured correctly on all devices."
+            },
+            {
+              "name": "Jesse Esteban",
+              "description": "Yes, we've checked the network cables and switches, and everything seems to be in order. We've also verified the network settings on all devices, but we're still experiencing connectivity issues. Any other suggestions?"
+            },
+            {
+              "name": "Arian Rodriguez",
+              "description": "In that case, you may want to check the network configuration on your router or access point. Make sure that the IP address, subnet mask, and default gateway are configured correctly. You may also want to check for any firmware updates for your router or access point."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "image": "https://raw.githubusercontent.com/AplicacionesWeb-WX54/si730-WX54-Grupo1-Repository/main/assets/members-profile/nekolas-profile.png",
+          "name": "Jesse Esteban",
+          "title": "Networking Issue",
+          "description": "Hi everyone, we're experiencing some connectivity issues with our office network. Despite troubleshooting on our end, we're still unable to resolve the issue. Any suggestions on what might be causing this and how we can fix it?",
+          "answers": [
+            {
+              "name": "Arian Rodriguez",
+              "description": "Have you checked the network cables and switches? Sometimes, a faulty cable or switch can cause connectivity issues. Also, make sure that the network settings are configured correctly on all devices."
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "image": "https://raw.githubusercontent.com/AplicacionesWeb-WX54/si730-WX54-Grupo1-Repository/main/assets/members-profile/nekolas-profile.png",
+          "name": "Jesse Esteban",
+          "title": "Networking Issue",
+          "description": "Hi everyone, we're experiencing some connectivity issues with our office network. Despite troubleshooting on our end, we're still unable to resolve the issue. Any suggestions on what might be causing this and how we can fix it?",
+          "answers": [
+            {
+              "name": "Arian Rodriguez",
+              "description": "Have you checked the network cables and switches? Sometimes, a faulty cable or switch can cause connectivity issues. Also, make sure that the network settings are configured correctly on all devices."
+            },
+            {
+              "name": "Jesse Esteban",
+              "description": "Yes, we've checked the network cables and switches, and everything seems to be in order. We've also verified the network settings on all devices, but we're still experiencing connectivity issues. Any other suggestions?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id_user": 2,
+      "forum_posts": [
+        {
+          "id": 4,
+          "image": "https://raw.githubusercontent.com/AplicacionesWeb-WX54/si730-WX54-Grupo1-Repository/main/assets/members-profile/arigeimpleis.jpg",
+          "name": "Arian Rodriguez",
+          "title": "Networking Issue",
+          "description": "Hi everyone, we're experiencing some connectivity issues with our office network. Despite troubleshooting on our end, we're still unable to resolve the issue. Any suggestions on what might be causing this and how we can fix it?",
+          "answers": [
+            {
+              "name": "Arian Rodriguez",
+              "description": "Have you checked the network cables and switches? Sometimes, a faulty cable or switch can cause connectivity issues. Also, make sure that the network settings are configured correctly on all devices."
+            },
+            {
+              "name": "Jesse Esteban",
+              "description": "Yes, we've checked the network cables and switches, and everything seems to be in order. We've also verified the network settings on all devices, but we're still experiencing connectivity issues. Any other suggestions?"
+            },
+            {
+              "name": "Arian Rodriguez",
+              "description": "In that case, you may want to check the network configuration on your router or access point. Make sure that the IP address, subnet mask, and default gateway are configured correctly. You may also want to check for any firmware updates for your router or access point."
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "image": "https://raw.githubusercontent.com/AplicacionesWeb-WX54/si730-WX54-Grupo1-Repository/main/assets/members-profile/arigeimpleis.jpg",
+          "name": "Arian Rodriguez",
+          "title": "Networking Issue",
+          "description": "Hi everyone, we're experiencing some connectivity issues with our office network. Despite troubleshooting on our end, we're still unable to resolve the issue. Any suggestions on what might be causing this and how we can fix it?",
+          "answers": [
+            {
+              "name": "Arian Rodriguez",
+              "description": "Have you checked the network cables and switches? Sometimes, a faulty cable or switch can cause connectivity issues. Also, make sure that the network settings are configured correctly on all devices."
+            },
+            {
+              "name": "Jesse Esteban",
+              "description": "Yes, we've checked the network cables and switches, and everything seems to be in order. We've also verified the network settings on all devices, but we're still experiencing connectivity issues. Any other suggestions?"
+            },
+            {
+              "name": "Arian Rodriguez",
+              "description": "In that case, you may want to check the network configuration on your router or access point. Make sure that the IP address, subnet mask, and default gateway are configured correctly. You may also want to check for any firmware updates for your router or access point."
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "image": "https://raw.githubusercontent.com/AplicacionesWeb-WX54/si730-WX54-Grupo1-Repository/main/assets/members-profile/arigeimpleis.jpg",
+          "name": "Arian Rodriguez",
+          "title": "Networking Issue",
+          "description": "Hi everyone, we're experiencing some connectivity issues with our office network. Despite troubleshooting on our end, we're still unable to resolve the issue. Any suggestions on what might be causing this and how we can fix it?",
+          "answers": [
+            {
+              "name": "Arian Rodriguez",
+              "description": "Have you checked the network cables and switches? Sometimes, a faulty cable or switch can cause connectivity issues. Also, make sure that the network settings are configured correctly on all devices."
+            },
+            {
+              "name": "Jesse Esteban",
+              "description": "Yes, we've checked the network cables and switches, and everything seems to be in order. We've also verified the network settings on all devices, but we're still experiencing connectivity issues. Any other suggestions?"
+            },
+            {
+              "name": "Arian Rodriguez",
+              "description": "In that case, you may want to check the network configuration on your router or access point. Make sure that the IP address, subnet mask, and default gateway are configured correctly. You may also want to check for any firmware updates for your router or access point."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "first": "Cloud Storage Solutions: Facilitate remote access to important files and data.",
+      "second": "James Gillighan, Software Engineer",
+      "third": "In progress",
+      "fourth": "04/05/2024",
+      "publisher_id": 2,
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "first": "Project Management Tools: Organize our internal tasks and ensure timely project delivery to our clients.",
+      "second": "Carlos Martinez, Project Lead",
+      "third": "Active",
+      "fourth": "14/02/2024",
+      "publisher_id": 1,
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "first": "Customer Relationship Management (CRM) Software: Manage customer interactions and data throughout the customer lifecycle.",
+      "second": "Samantha Johnson, Customer Service",
+      "third": "In progress",
+      "fourth": "09/01/2023",
+      "publisher_id": 3,
+      "rating": 5
+    },
+    {
+      "id": 4,
+      "first": "Data Analytics Tools: Analyze and visualize data to make informed business decisions.",
+      "second": "Liam O'Connell, Data Analyst",
+      "third": "Active",
+      "fourth": "04/05/2024",
+      "publisher_id": 2,
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "first": "Cloud Storage Solutions: Facilitate remote access to important files and data.",
+      "second": "Marco Gonzales, Bright Logistics",
+      "third": "In progress",
+      "fourth": "04/05/2024",
+      "publisher_id": 1,
+      "rating": 5
+    },
+    {
+      "id": 6,
+      "first": "Project Management Tools: Organize our internal tasks and ensure timely project delivery to our clients.",
+      "second": "Carlos Martinez, Oakwood Manufacturing",
+      "third": "Active",
+      "fourth": "14/02/2024",
+      "publisher_id": 3,
+      "rating": 5
+    },
+    {
+      "id": 7,
+      "first": "Customer Relationship Management (CRM) Software: Manage customer interactions and data throughout the customer lifecycle.",
+      "second": "Samantha Johnson, Tech Solutions",
+      "third": "Completed",
+      "fourth": "09/01/2023",
+      "publisher_id": 2,
+      "rating": 5
+    },
+    {
+      "id": 8,
+      "first": "Data Analytics Tools: Analyze and visualize data to make informed business decisions.",
+      "second": "Liam O'Connell, Analytics Inc.",
+      "third": "Rejected",
+      "fourth": "04/05/2024",
+      "publisher_id": 1,
+      "rating": 5
+    },
+    {
+      "id": 9,
+      "first": "Analytics and Reporting Tools: We need to assess the performance of our business and make informed decisions.",
+      "second": "David Fernandez, Data Analyst.",
+      "third": "Finished",
+      "fourth": "04/05/2024",
+      "publisher_id": 1,
+      "rating": 9
+    },
+    {
+      "id": 10,
+      "first": "Cybersecurity Solutions: We're concerned about protecting our confidential information and preventing potential cyber threats..",
+      "second": "Pablo Gomez, Cybersecurity Expert.",
+      "third": "Finished",
+      "fourth": "27/03/2024",
+      "rating": 10
+    }
+  ]
+}

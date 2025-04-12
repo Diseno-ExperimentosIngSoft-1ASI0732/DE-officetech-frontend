@@ -1,0 +1,50 @@
+mat-card {
+  border-radius: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  display: block; /* o display: flex si necesitas flexbox */
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  width: auto;
+
+}
+
+mat-card-header {
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 1rem;
+}
+
+.card-width {
+  max-width: 550px;
+  margin: 2rem auto;
+}
+
+.card__content-header-title {
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+.card__content-header-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.card__content-subject {
+  font-weight: bold;
+}
+
+.responses-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 2rem 0;
+}

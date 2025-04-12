@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Your previous tech requirements</h1>
+  <div class="content-wrapper">
+    <mat-card class="tech-card">
+      <mat-card-header>
+        <mat-card-title>Tech Service</mat-card-title>
+      </mat-card-header>
+      <div class="user-details">
+        <img class="user-icon" src="assets/images/icon-user.png" alt="User icon">
+        <mat-card-subtitle>{{technician}}</mat-card-subtitle>
+      </div>
+      <mat-card-content>
+        <p>{{service.title}}</p>
+      </mat-card-content>
+    </mat-card>
+    <div class="comment-section">
+      <textarea class="text-box" rows="4" placeholder="Escriba sus comentarios aquí..." [(ngModel)]="comment"></textarea>
+      <p class="phrase-rating">Rating</p>
+      <app-rating class="rating-2" [rating]="rating"  [starCount]="starCount" [color]="starColorW" (ratingUpdated)="onRatingChanged($event)"></app-rating>
+      <button class="comment-button" (click)="addComment()">Add comment</button>
+    </div>
+
+
+  </div>
+
+  <mat-card *ngIf="service" class="comment">
+    <mat-card-header>
+      <h2>Your comment</h2>
+    </mat-card-header>
+    <div class="card">
+      <div class="card__comment">
+        {{service.comment}}
+      </div>
+      <div class="card__rating">
+        <app-rating [rating]="service.rating" [starCount]="starCount" [color]="starColorW"></app-rating>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+

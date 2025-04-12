@@ -1,0 +1,27 @@
+<div class="tech-services">
+  <h1>Your previous tech requirements</h1>
+  <div class="sub-titles">
+      <div class="yellow-box">Tech Service</div>
+      <div class="yellow-box">Company</div>
+      <div class="yellow-box">Done by</div>
+
+    <div class="yellow-box">Your rating</div>
+  </div>
+
+  <app-monkey-not-found *ngIf="services.length === 0" textString="The services you have performed can be viewed here with the company's rating."></app-monkey-not-found>
+  <div class="services__history">
+    <div *ngFor="let service of services" class="white-box-container">
+      <div class="white-box">
+
+        <div class="report-section">
+          <p class="report-description">{{ service.first }}</p>
+          <p class="report-author">{{ service.second }}</p>
+          <p class="report-date">{{ service.fourth }}</p>
+          <p class="report-date">{{ service.rating }}/5 <i class="fa-solid fa-star"></i></p>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

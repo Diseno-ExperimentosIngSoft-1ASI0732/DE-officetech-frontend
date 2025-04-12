@@ -1,0 +1,161 @@
+.card {
+  background: #fff;
+  border-radius: 14px;
+  width: 40%;
+  min-width: 500px;
+  margin: 5rem auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+button {
+  border-radius: 40px;
+  margin: auto;
+  width: 25%;
+  background-color: #232F9B !important;
+  font-family: Lexend Deca, sans-serif;
+  font-size: 20px;
+  color: white;
+  border: none;
+  padding: 2rem 0.5rem;
+}
+button:hover {
+  transform: scale(1.025);
+  animation-duration: 2s;
+  cursor: pointer;
+}
+button[disabled]{
+  background-color: #5c5c5c !important;
+}
+
+p {
+  color: white;
+  padding: 5px;
+  margin: 0;
+}
+
+
+
+mat-card-title {
+  font-size: 2em;
+  font-family: Lexend Deca, sans-serif;
+}
+
+mat-card-subtitle a {
+  color: #888888;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+
+}
+
+form {
+  margin-top: 5%;
+  text-align: center;
+  color: white !important;
+}
+
+mat-form-field {
+  width: 70%;
+  color: white !important;
+}
+
+mat-label {
+  font-size: 1vw;
+}
+@media only screen and (max-width: 1256px) {
+  mat-label {
+    font-size: 12px;
+  }
+}
+
+matInput {
+  color: white !important;
+}
+
+
+/* Estilos para la alineación de los campos "EXPIRATION DATE" y "CVV" */
+.expiration-cvv-container {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+
+}
+
+.expiration-field {
+  width: 70%;
+  margin-right: 5%;
+}
+
+.cvv-field {
+  width: 60%;
+  margin-left: 10%;
+}
+
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+mat-card-content{
+  position: relative; /* Enable relative positioning */
+  top: -50px;
+}
+
+
+.blue{
+  background: #2C3F84;
+}
+.yellow{
+  background: #FBD864;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(4px);
+}
+
+#c1 {
+  width: 280px;
+  height: 280px;
+  background-color: #FBD864;
+  top: -5%;
+  left: 3%;
+}
+
+#c2{
+  width: 200px;
+  height: 200px;
+  background-color: #2C3F84;
+  top: 60%;
+  left: 12%;
+}
+
+#c3 {
+  width: 190px;
+  height: 190px;
+  background-color: #FBD864;
+  top: 80%;
+  left: 70%;
+}
+
+#c4 {
+  width: 260px;
+  height: 260px;
+  background-color: #2C3F84;
+  top: 20%;
+  left: 80%;
+}
+
+.circle-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+

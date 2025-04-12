@@ -1,0 +1,13 @@
+<div class="panel__container">
+  <h1 class="panel__container-title" aria-label="title">{{title}}</h1>
+  <app-card-header [header_titles]="header_titles" role="heading"/>
+
+  <div class="panel__container-rows" role="listbox">
+    <app-card [data]="data" *ngIf="data.length > 0"/>
+    <app-monkey-not-found *ngIf="!data.length && type_user==='company'" textString="There is nothing to show here, start by requesting services from our technicians!"></app-monkey-not-found>
+    <app-monkey-not-found *ngIf="!data.length && type_user==='technician'" textString="Your future services with any company will be here!"></app-monkey-not-found>
+  </div>
+</div>
+
+<div class="bg"></div>
+

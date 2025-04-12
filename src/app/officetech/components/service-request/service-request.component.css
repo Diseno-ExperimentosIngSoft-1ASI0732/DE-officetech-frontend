@@ -1,0 +1,43 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+div{
+  background: #FBD864;
+  border-radius: 16px;
+  color: white;
+  font-family: "Lexend Deca", sans-serif;
+  width: 90%;
+  max-width: 500px;
+  margin: 3rem auto 2rem;
+  text-align: center;
+}
+h3{
+  padding: 0.5rem;
+}
+
+textarea{
+  wrap: break-word;
+  resize: none;
+  height: 200px;
+  max-height: 80%;
+}
+
+.publish{
+  text-align: center;
+  margin: 0 40%;
+  width: 20%;
+}
+
+
+.mat-mdc-unelevated-button:not(:disabled) {
+  background-color: #232F9B !important;
+  border-radius: 360px !important;
+}

@@ -1,0 +1,214 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 64px);
+
+}
+
+.op {
+  display: flex;
+  justify-content: space-evenly; /* Asegura que las tarjetas estén espaciadas uniformemente */
+  align-items: flex-start; /* Alinea las tarjetas en la parte superior */
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
+}
+
+.card, .card2 {
+  width: 400px; /* Establece un ancho relativo para ambas tarjetas para una mayor responsividad */
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Asegura que el contenido de la tarjeta se alinee verticalmente */
+}
+
+/* Revisa el estilo de las imágenes para asegurar que se ajusten bien en su contenedor */
+.profile-image img {
+  border-radius: 50%;
+  height: 100%; /* Asegura que la imagen llene el contenedor */
+  object-fit: cover; /* Ajusta la imagen de forma adecuada sin distorsionar */
+}
+
+/* Botones dentro de las tarjetas con ajustes */
+button, .btn-edit, .btn-cancel {
+  width: calc(100% - 20px); /* Ajusta el ancho considerando el padding */
+  margin: 10px; /* Añade margen alrededor de los botones */
+}
+
+/* Estilos de Angular Material revisados para ajustarse al diseño */
+mat-card {
+  margin: 50px 20px; /* Consistencia en el margen */
+  width: 45%; /* Ancho igual al de las tarjetas personalizadas */
+}
+
+/* Para que los botones de Angular Material no se extiendan demasiado */
+mat-card-actions button {
+  max-width: 200px;
+  margin: 10px auto; /* Centra los botones dentro de la tarjeta */
+}
+
+/* Ajustes adicionales para el manejo de campos de formulario y etiquetas */
+.form-group label {
+  display: block;
+  color: #333;
+  margin: 5px 0;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group input {
+  width: 80%;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid #000;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.form-group__names {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group__names input {
+  width: 70%;
+}
+
+.profile-image {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+h2 {
+  margin: 0;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 2.2rem;
+}
+
+.edit-profile__content {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card-content {
+  padding: 2rem;
+}
+
+.card2 {
+  margin: 0;
+}
+
+.skills__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  gap: .5rem;
+}
+
+.btn {
+  background-color: #fff;
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #232F9B;
+  border-radius: 15px;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+  width: 120px;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: scale(1.025);
+}
+
+.op {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+}
+
+.edit-email {
+  width: 80%;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid #000;
+  font-family: "Lexend Deca", sans-serif;
+  margin: 0 auto;
+  background-color: #EEEEEE;
+  color: #686D76;
+  font-style: italic;
+  padding: .3rem 0;
+}
+
+.best-skill {
+  background-color: #232F9B;
+  color: #000;
+  padding: .5rem 1rem;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.fa-trash {
+  color: #ff0000;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all .2s;
+}
+
+.fa-trash:hover {
+  opacity: .5;
+}
+
+.bg {
+  background-image: url("../../../../assets/images/bg-fondo.png");
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  z-index: -1;
+  bottom: -5%;
+  right: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+/* Asegúrate de revisar los media queries para responsividad en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .card, .card2, mat-card {
+    width: 90%; /* Aumenta el ancho en pantallas pequeñas */
+    margin: 20px auto; /* Reduce el margen para mejor ajuste */
+  }
+}
+
+
+@media screen and (max-width: 330px) {
+  .op {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 845px) {
+  .container {
+    height: auto;
+    margin: 2rem 0;
+  }
+}

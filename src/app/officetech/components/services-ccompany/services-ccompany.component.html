@@ -1,0 +1,27 @@
+<div class="tech-services">
+  <h1>Your previous tech requirements</h1>
+  <button class="btn-rounded-blue" (click)="newRequestService()">Request a new tech service +</button>
+  <div class="sub-titles">
+    <div class="box-yellows">
+      <div class="yellow-box">Tech Service</div>
+      <div class="yellow-box">Technician</div>
+      <div class="yellow-box">Done by</div>
+    </div>
+    <div class="yellow-box">Give a rating</div>
+  </div>
+
+  <div class="services__history">
+    <app-monkey-not-found *ngIf="services.length === 0" textString="The services of our technicians that have been completed will appear here..."></app-monkey-not-found>
+    <div *ngFor="let service of services" class="white-box-container">
+      <div class="white-box">
+        <div class="report-section">
+          <p class="report-description">{{ service.first }}</p>
+          <p class="report-author">{{ service.second }}</p>
+          <p class="report-date">{{ service.third }}</p>
+        </div>
+      </div>
+      <div class="btn-rounded-blue btn-add-comment" (click)="newComment(service.id)">+ Add Comment</div>
+    </div>
+
+  </div>
+</div>

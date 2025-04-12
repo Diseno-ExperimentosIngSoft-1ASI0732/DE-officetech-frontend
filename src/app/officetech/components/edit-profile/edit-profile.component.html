@@ -1,0 +1,70 @@
+<div class="container">
+
+  <div class="edit-profile__content">
+  <div class="card">
+
+      <div class="profile-image">
+        <h2>Edit Profile</h2>
+        <img [src]="user_data.image" alt="Avatar" class="avatar" width="50px">
+      </div>
+
+      <div class="card-content">
+        <div class="card-body">
+
+          <div class="form-group__names">
+
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" id="firstName" [(ngModel)]="firstName" [placeholder]="user_data.name.split(' ')[0]">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" id="lastName" [(ngModel)]="lastName" [placeholder]="user_data.name.split(' ')[1]">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <div class="edit-email">{{user_data.email}}</div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control" id="phone" [(ngModel)]="phone" [placeholder]="user_data.phone">
+          </div>
+          <div class="form-group">
+            <label for="password">New Password</label>
+            <input type="password" class="form-control" id="password" [(ngModel)]="password">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <mat-card class="card2">
+
+      <mat-card-content>
+        <h2>Your Skills</h2>
+        <mat-action-list>
+
+          <button *ngFor="let skill of skills" mat-list-item class="skills__container">
+            <mat-icon>star</mat-icon>
+            <span>{{ skill.name }}</span>
+            <i class="fa-solid fa-trash" (click)="deleteSkill(skill.id)"></i>
+          </button>
+        </mat-action-list>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="openDialog()">New Skill</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="op">
+    <div class="btn btn-edit" (click)="saveProfile()">Save</div>
+    <div class="btn btn-cancel" (click)="cancelProfile()">Cancel</div>
+  </div>
+</div>
+
+<div class="bg"></div>
+
+
+
+

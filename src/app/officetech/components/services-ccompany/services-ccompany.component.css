@@ -1,0 +1,135 @@
+.tech-services {
+  max-width: 1080px;
+  margin: 0 auto;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+
+.tech-services h1 {
+  text-align: left;
+  color: #232F9B;
+  margin: 2rem;
+  font-size: 2.5rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: bold;
+}
+
+.btn-rounded-blue {
+  background-color: #232F9B;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.sub-titles {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+
+}
+
+.yellow-box {
+  background-color: #FBD864;
+  padding: 8px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  max-width: max-content;
+}
+
+/*select three yellow-box*/
+.box-yellows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 750px;
+}
+
+.white-box {
+  border: none;
+  background-color: white;
+  padding: 15px;
+  margin: 10px 5px;
+  border-radius: 45px;
+  min-width: 750px;
+}
+
+.white-box p {
+  margin: 0;
+}
+
+.white-box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.report-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.report-author, .report-date {
+  text-align: left;
+  margin-right: 100px;
+}
+
+.content-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-rounded-blue {
+  margin-left: 20px;
+}
+
+.services__history {
+  overflow-y: scroll;
+  height: calc(100vh - 350px);
+  margin: 0 1.5rem;
+}
+
+.btn-rounded-blue {
+  transition: all .3s;
+}
+
+.btn-rounded-blue:hover {
+  opacity: .8;
+}
+
+
+.report-description {
+  max-width: 180px;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 1010px) {
+  .white-box, .box-yellows {
+    min-width: 450px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .white-box, .box-yellows {
+    min-width: 300px;
+  }
+  .report-author{
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,46 @@
+<ng-container *ngIf="post">
+  <!-- Tarjeta para la publicación seleccionada -->
+
+  <mat-card role="contentinfo" class="card-width">
+    <div class="card__content">
+      <mat-card-header role="heading">
+
+        <img [src]="post.image" class="card__content-header-avatar">
+
+        <span class="card__content-header-title">{{ post.name }} </span>
+        </mat-card-header>
+
+      <mat-card-content role="contentinfo">
+        <p class="card__content-subject">{{ post.title }}</p>
+        <p class="card__description">
+          {{ post.description }}
+        </p>
+      </mat-card-content>
+
+
+    </div>
+  </mat-card>
+  <app-monkey-not-found *ngIf="post.answers.length === 0" textString="No answer to show, when our technicians answer, you will be able to read them here"></app-monkey-not-found>
+
+  <div class="responses" *ngIf="post.answers.length > 0">
+    <div class="response-container">
+      <div class="responses-title">Responses:</div>
+    </div>
+
+    <!-- Lista de tarjetas para cada respuesta -->
+    <div *ngFor="let answer of post.answers" >
+      <mat-card class="answer-card card-width" *ngIf="post.answers.length > 0">
+        <mat-card-header>
+          <mat-card-title>{{ answer.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          {{ answer.description }}
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="noanswers" *ngIf="post.answers.length == 0">
+      <p>No answers yet</p>
+    </div>
+  </div>
+</ng-container>

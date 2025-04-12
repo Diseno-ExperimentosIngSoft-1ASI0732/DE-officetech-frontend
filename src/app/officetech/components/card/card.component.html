@@ -1,0 +1,23 @@
+<mat-card role="contentinfo" *ngFor="let e of data">
+  <div class="card__content" role="list">
+    <div class="card__content-item" role="listitem" style="width: 50%">
+      <p aria-describedby="item">{{e["first"]}}</p>
+    </div>
+
+    <div class="card__content-item" style="width: 20%">
+      <p aria-describedby="item">{{e["second"]}}</p>
+    </div>
+
+    <div class="card__content-item" style="width: 20%">
+      <p aria-describedby="item">{{e["third"]}}</p>
+    </div>
+
+    <div class="card__content-item" style="width: 10%">
+      <p aria-describedby="item">{{e["fourth"]}}</p>
+    </div>
+
+    <div class="icon-cancel" (click)="cancelService(e['id'])">
+      <i class="fa-solid fa-ban"></i>
+    </div>
+  </div>
+</mat-card>

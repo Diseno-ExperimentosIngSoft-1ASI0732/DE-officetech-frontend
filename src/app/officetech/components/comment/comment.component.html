@@ -1,0 +1,25 @@
+<div class="container">
+
+  <mat-card role="contentinfo" class="card-mat">
+    <div class="card__content">
+      <mat-card-header role="heading">
+
+        <img [src]="element.image" class="card__content-header-avatar">
+        <span class="card__content-header-title">{{ element.name }} </span>
+      </mat-card-header>
+
+      <mat-card-content role="contentinfo">
+        <p class="card__content-subject">{{ element.title }}</p>
+        <p class="card__description">
+          {{ element.description }}
+        </p>
+      </mat-card-content>
+    </div>
+  </mat-card>
+  <div class="comment__container-responses" (click)="getResponses(element.id)" *ngIf="type_user !== 'technician'">
+    <svg width="39" height="35" viewBox="0 0 39 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.7558 29.6587L12.4969 29.5836L12.2919 29.7586C9.52049 32.1246 6.44417 33.3121 4.05229 33.9072C2.93613 34.1848 1.97281 34.3326 1.26503 34.4111C5.06631 30.3285 5.75879 27.5118 5.86076 26.2916L5.88234 26.0334L5.68382 25.8669C2.46044 23.1632 0.5 19.5233 0.5 15.5556C0.5 7.33746 8.93893 0.5 19.5 0.5C30.0611 0.5 38.5 7.33746 38.5 15.5556C38.5 23.7737 30.0611 30.6111 19.5 30.6111C17.1301 30.6111 14.8565 30.2681 12.7558 29.6587Z" fill="white" stroke="black"/>
+    </svg>
+    <p aria-label="info" style="margin: 0">{{ answersLength }} responses</p>
+  </div>
+</div>

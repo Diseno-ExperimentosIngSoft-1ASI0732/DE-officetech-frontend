@@ -1,0 +1,78 @@
+.card-post {
+  max-width: 55%;
+  margin: 2rem auto;
+}
+
+.answers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.answer-card {
+  max-width: 45%;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+mat-card {
+  border-radius: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  display: block; /* o display: flex si necesitas flexbox */
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+
+  margin-bottom: 20px;
+
+  justify-content: center;
+  flex-wrap: wrap;
+
+  width: auto;
+
+}
+mat-card-header {
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 1rem;
+}
+
+.card__content-header-title {
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+.card__content-header-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.card__content-subject {
+  font-weight: bold;
+}
+
+.responses-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+
+  margin: 2rem ;
+}
+
+form {
+  width: 100%; /* Adjust width as needed */
+  max-width: 600px; /* Maximum width of the form */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: adds shadow for better visibility */
+
+}

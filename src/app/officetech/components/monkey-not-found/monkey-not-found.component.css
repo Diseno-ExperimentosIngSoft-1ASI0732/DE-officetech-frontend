@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 650px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  color: #000;
+  font-weight: bold;
+  font-family: "Lexend Deca", sans-serif;
+  padding: 1rem 0;
+}

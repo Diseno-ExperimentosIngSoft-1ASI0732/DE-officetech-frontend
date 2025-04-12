@@ -1,0 +1,51 @@
+<div class="content-container">
+  <mat-card class="card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Payment Details</mat-card-title>
+      <mat-card-subtitle><a (click)="returnSignUp()">Go to the previous step</a></mat-card-subtitle>
+    </mat-card-header>
+    <img src="https://t3.ftcdn.net/jpg/03/07/83/16/360_F_307831681_MqVLpjXZOH7scHO0DtrduQD7FUXDKH4X.jpg" width="60%" style="margin:auto">
+    <mat-card-content>
+      <form [formGroup]="paymentForm" class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>CARDHOLDER NAME</mat-label>
+          <input matInput formControlName="cardHolderName" placeholder="John Doe">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>CARD NUMBER</mat-label>
+          <input matInput type="number" formControlName="cardNumber" placeholder="4857 4528 1252 3655">
+        </mat-form-field>
+
+        <div class="expiration-cvv-container">
+          <mat-form-field class="expiration-field">
+            <mat-label>MONTH</mat-label>
+            <mat-select formControlName="expiratoryMonth">
+              <mat-option *ngFor="let month of months" [value]="month.value">{{ month.label }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>YEAR</mat-label>
+            <mat-select formControlName="expiratoryYear">
+              <mat-option *ngFor="let year of years" [value]="year">{{ year }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="cvv-field">
+            <mat-label>CVV</mat-label>
+            <input type="number" matInput formControlName="cvv" placeholder="123" min="100" max="999">
+          </mat-form-field>
+        </div>
+        <button mat-flat-button color="primary" [disabled]="paymentForm.invalid" (click)="pay()">Pay</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="circle-container">
+    <div class="circle blue" id="c1"></div>
+    <div class="circle blue" id="c2"></div>
+    <div class="circle yellow" id="c3"></div>
+    <div class="circle yellow" id="c4"></div>
+  </div>
+</div>

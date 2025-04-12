@@ -1,0 +1,45 @@
+<ng-container *ngIf="post">
+  <!-- Tarjeta para la publicación seleccionada -->
+  <mat-card role="contentinfo" class="card-post">
+    <div class="card__content">
+      <mat-card-header role="heading">
+
+        <img [src]="post.image" class="card__content-header-avatar">
+
+        <span class="card__content-header-title">{{ post.name }} </span>
+      </mat-card-header>
+
+      <mat-card-content role="contentinfo">
+        <p class="card__content-subject">{{ post.title }}</p>
+        <p class="card__description">
+          {{ post.description }}
+        </p>
+        <div class="container">
+
+            <mat-form-field appearance="fill" style="width: 100%;">
+            <mat-label>Your response</mat-label>
+              <input matInput [formControl]="messageControl">
+            </mat-form-field>
+
+          <button mat-stroked-button (click)="publishMessage()">Publish Message</button>
+        </div>
+      </mat-card-content>
+    </div>
+
+  </mat-card>
+  <div *ngFor="let msg of messages" class="answers">
+    <mat-card class="answer-card">
+      <mat-card-header>
+        <mat-card-title><strong>{{ msg.nameTechnician }}'</strong> response</mat-card-title>
+        <mat-card-subtitle>{{ msg.createdAt | date:'medium' }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        {{ msg.description }}
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</ng-container>
+
+
+
