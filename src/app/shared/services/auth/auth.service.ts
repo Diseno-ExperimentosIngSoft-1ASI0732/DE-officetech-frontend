@@ -1,69 +1,78 @@
 import { Injectable } from '@angular/core';
-import {environment} from "../../../../environments/environment";
-import {HttpClient} from "@angular/common/http";
+import { environment } from "../../../../environments/environment";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  baseUrl: string = ""
+  baseUrl: string = "";
+
   constructor(private http: HttpClient) {
     this.baseUrl = environment.baseUrl;
   }
 
+  // Método de sign up con token
   async signUpWithToken(email: string, password: string, role: string) {
-    // headers with authorization bearer
+    const token = this.getToken(); // Obtenemos el token
     const headers = {
-      'Authorization': 'Bearer 8Zz5tw0Ionm3XPZZfN0NOml3z9FMfmpgXwovR9fp6ryDIoGRM8EPHAB6iHsc0fb',
+      'Authorization': `Bearer ${token}`, // Usamos el token dinámicamente
       'Content-Type': 'application/json',
       'accept': 'application/json'
-    }
-    if(role === 'company') role = 'ROLE_COMPANY'
-    else role = 'ROLE_TECHNICIAN'
+    };
+
+    if (role === 'company') role = 'ROLE_COMPANY';
+    else role = 'ROLE_TECHNICIAN';
+
     const body = {
       username: email,
       password: password,
       roles: [role]
-    }
+    };
+
     try {
-      return this.http.post<any>(`${this.baseUrl}/authentication/sign-up`, body, {headers});
-    }catch(e) {
+      return this.http.post<any>(`${this.baseUrl}/authentication/sign-up`, body, { headers });
+    } catch (e) {
       console.log('Error to sign up with token', e);
       return null;
     }
   }
 
+  // Método de sign in con token
   async signInWithToken(email: string, password: string) {
+    const token = this.getToken(); // Obtenemos el token
     const headers = {
-      'Authorization': 'Bearer 8Zz5tw0Ionm3XPZZfN0NOml3z9FMfmpgXwovR9fp6ryDIoGRM8EPHAB6iHsc0fb',
+      'Authorization': `Bearer ${token}`, // Usamos el token dinámicamente
       'Content-Type': 'application/json',
       'accept': 'application/json'
     };
+
     const body = {
       username: email,
       password: password
     };
 
     try {
-      return this.http.post<any>(`${this.baseUrl}/authentication/sign-in`, body, {headers});
-    }catch(e) {
+      return this.http.post<any>(`${this.baseUrl}/authentication/sign-in`, body, { headers });
+    } catch (e) {
       console.log('Error to sign in with token', e);
       return null;
     }
   }
 
+  // Método de sign in sin token
   async signIn(email: string, password: string) {
     const headers = this.getHeadersAuthorization();
     try {
-      return this.http.get<any>(`${this.baseUrl}/auth/login?email=${email}&password=${password}`, {headers});
+      return this.http.get<any>(`${this.baseUrl}/auth/login?email=${email}&password=${password}`, { headers });
     } catch (error) {
       console.log('Error to sign in', error);
       return null;
     }
   }
 
+  // Método de sign up sin token
   async signUp(firstName: string, lastName: string, email: string, password: string, role: string) {
-    console.log('token', this.getToken());
     const headers = this.getHeadersAuthorization();
 
     try {
@@ -73,32 +82,39 @@ export class AuthService {
         "email": email,
         "password": password,
         "role": role
-      }, {headers});
-    }catch(e) {
+      }, { headers });
+    } catch (e) {
       console.log('Error to sign up', e);
       return null;
     }
   }
 
+  // Obtener usuario por ID
   getUserById(id: number) {
     const headers = this.getHeadersAuthorization();
-    return this.http.get<any>(`${this.baseUrl}/auth/${id}`, {headers});
-
+    return this.http.get<any>(`${this.baseUrl}/auth/${id}`, { headers });
   }
 
+  // Guardar el token en el localStorage
   saveToken(token: string) {
     localStorage.setItem('token', token);
   }
 
+  // Obtener el token almacenado en el localStorage
   getToken() {
-    return localStorage.getItem('token');
+    const token = localStorage.getItem('token');
+    console.log("Token obtenido:", token);
+    return token;
   }
 
+
+  // Crear encabezados de autorización con el token
   getHeadersAuthorization() {
+    const token = this.getToken(); // Obtenemos el token
     return {
-      "Authorization": `Bearer ${this.getToken()}`,
-      "Content-Type": "application/json",
-      "accept": "application/json"
-    }
+      'Authorization': `Bearer ${token}`, // Usamos el token dinámicamente
+      'Content-Type': 'application/json',
+      'accept': 'application/json'
+    };
   }
 }
