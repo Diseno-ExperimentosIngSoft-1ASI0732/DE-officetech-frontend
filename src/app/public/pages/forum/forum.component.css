@@ -21,6 +21,35 @@ h1 {
   align-items: center;
   z-index: 1;
 }
+.fab-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  color: white;
+  font-size: 26px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.fab-button:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
+}
+
+.fab-button:active {
+  transform: scale(0.95);
+}
+
 
 .popup__new_forum__content {
   width: max-content;
